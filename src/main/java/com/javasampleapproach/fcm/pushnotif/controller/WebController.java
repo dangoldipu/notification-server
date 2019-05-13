@@ -22,11 +22,12 @@ public class WebController {
     @Autowired
     AndroidPushNotificationsService androidPushNotificationsService;
 
+    @Scheduled(fixedDelay = 10000)
     @RequestMapping(value = "/send", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> send() throws JSONException {
             System.out.println("inResource"+TOKEN);
             JSONObject body = new JSONObject();
-            body.put("to", "c8ykE2vZCF0:APA91bGQQDODV_TFi3YRLigcttSdGQoeB1hM2vfD_O7Ktnn6GeNrFR6aJD7GxLSvBKvdMWrgJ-qdlFD5IcXAVTEm976ji5hwQJKjgmzkBcyeUhwZ7V0U18l9xEOMTrBhaC8pb7NOSC-G");
+            body.put("to", TOKEN);
             body.put("priority", "high");
 
             JSONObject notification = new JSONObject();
