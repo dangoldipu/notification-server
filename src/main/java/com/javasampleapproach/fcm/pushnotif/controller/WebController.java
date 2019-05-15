@@ -22,7 +22,7 @@ public class WebController {
     @Autowired
     AndroidPushNotificationsService androidPushNotificationsService;
 
-    @Scheduled(fixedDelay = 10000)
+   
     @RequestMapping(value = "/send", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> send() throws JSONException {
             System.out.println("inResource"+TOKEN);
