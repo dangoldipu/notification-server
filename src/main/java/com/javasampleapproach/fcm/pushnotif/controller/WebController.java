@@ -34,7 +34,7 @@ public class WebController {
             notification.put("title", "Custom notification");
             notification.put("body", "notif"+System.currentTimeMillis());
 
-            notification.put("click_action","https://maps.google.com");
+            notification.put("click_action","https://www.youtube.com/");
 
             body.put("notification", notification);
 
